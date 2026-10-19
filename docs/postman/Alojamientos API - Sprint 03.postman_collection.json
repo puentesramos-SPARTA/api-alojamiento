@@ -1,0 +1,360 @@
+{
+  "info": {
+    "_postman_id": "3dd8df08-7d66-4596-9d95-12d78582cb7e",
+    "name": "Alojamientos API - Sprint 03",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58229161"
+  },
+  "item": [
+    {
+      "name": "Sprint 3 - alojamientos",
+      "item": [
+        {
+          "name": "POST /api/v1/alojamientos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_usuario}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"titulo\": \"Apartamento Laureles\",\r\n  \"descripcion\": \"Alojamiento de práctica\",\r\n  \"precio_noche\": 180000,\r\n  \"ciudad\": \"Medellín\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alojamientos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "alojamientos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET {{baseUrl}}/api/v1/alojamientos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alojamientos",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "alojamientos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET {{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}}",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "alojamientos",
+                "{{alojamiento_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH {{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}}",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_usuario}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"ciudad\": \"Bogotá\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "alojamientos",
+                "{{alojamiento_id}}"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH {{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}} Copy",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_usuario2}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"ciudad\": \"Bogotá\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "alojamientos",
+                "{{alojamiento_id}}"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH {{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}} Copy 2",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_admin}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"ciudad\": \"bucaramanga\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "alojamientos",
+                "{{alojamiento_id}}"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Sprint 3 - Comodidades",
+      "item": [
+        {
+          "name": "POST {{baseUrl}}/api/v1/comodidades",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_admin}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nombre\": \"WiFi\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/comodidades",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "comodidades"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST {{baseUrl}}/api/v1/comodidades Copy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_usuario2}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"nombre\": \"WiFi\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/comodidades",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "comodidades"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET {{baseUrl}}/api/v1/comodidades",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/comodidades",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "comodidades"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH {{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}}/comodidades",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_usuario}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"comodidades_ids\": [10]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}}/comodidades",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "alojamientos",
+                "{{alojamiento_id}}",
+                "comodidades"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE {{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}}",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token_usuario}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/alojamientos/{{alojamiento_id}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "alojamientos",
+                "{{alojamiento_id}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
